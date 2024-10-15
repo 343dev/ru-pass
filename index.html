@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Генератор паролей</title>
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+  	<form class="form">
+   		<div class="form__password-wrapper">
+     		<output class="form__password" aria-live="polite"></output>
+     	</div>
+
+    	<button class="form__copy" type="button" aria-label="Копировать пароль в английской раскладке">
+     		Копировать
+     	</button>
+
+      <button class="form__generate" type="button" aria-label="Создать новый пароль">
+      	Создать новый
+      </button>
+
+      <label class="form__word-count">
+      	<span class="form__word-count-label label">
+       		Количество слов: <output class="form__word-count-indicator"></output>
+       	</span>
+
+        <input class="form__word-count-control" name="word-count" type="range" value="3" min="3" max="12">
+      </label>
+
+      <label class="form__divider">
+      	<span class="form__divider-label label">
+       		Разделитель:
+       	</span>
+
+        <input class="form__divider-control" name="divider" type="text" value="-" maxlength="1" />
+      </label>
+
+      <label class="form__capitalise">
+        <input class="form__capitalise-control" name="capitalise" type="checkbox" checked/>
+
+       	<span class="form__capitalise-label label">
+       		С заглавной
+       	</span>
+      </label>
+
+      <label class="form__number">
+       	<input class="form__number-control" name="include-number" type="checkbox" checked/>
+
+      	<span class="form__number-label label">
+       		Добавить цифру
+       	</span>
+      </label>
+   	</form>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

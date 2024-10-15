@@ -1,0 +1,27 @@
+{
+  "short_name": "Генератор",
+  "name": "Генератор паролей",
+  "description": "Генератор паролей с русскими словами",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2e2e30",
+  "theme_color": "#2e2e30",
+  "icons": [
+    {
+      "src": "/android-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/android-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+:root {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: system-ui, sans-serif;
+	line-height: 1.5;
+	touch-action: manipulation;
+}
+
+body {
+	display: grid;
+	align-items: end;
+	min-width: 320px;
+	min-height: 100vh;
+	min-height: 100dvh;
+	margin: 0;
+	font-size: 18px;
+	color: hsl(240 10% 3.9%);
+	background-color: hsl(240 5.9% 10%/.9);
+}
+
+button {
+	padding: 12px;
+	border: 0;
+	border-radius: 8px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .08), 0 1px 2px -1px rgba(0, 0, 0, .08);
+	font: inherit;
+	color: hsl(240 10% 3.9%);
+	cursor: pointer;
+}
+
+button:active {
+	position: relative;
+	top: 1px;
+	box-shadow: none;
+}
+
+.form {
+	box-sizing: border-box;
+	display: grid;
+	gap: 16px 8px;
+	max-width: 640px;
+	width: 100%;
+	padding: 16px 16px 32px;
+	border-radius: 16px 16px 0 0;
+	background-color: #fff;
+	font-weight: 500;
+}
+
+.label {
+	user-select: none;
+}
+
+.form__password-wrapper {
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 130px;
+	padding: 8px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .05),
+		0 1px 2px -1px rgba(0, 0, 0, .05);
+	border: 1px solid hsl(240 5.9% 90%);
+	border-radius: 8px;
+	-webkit-user-select: all;
+	user-select: all;
+}
+
+.form__password {
+	font-family: SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+	font-size: 20px;
+	font-weight: 700;
+	overflow-wrap: anywhere;
+	text-align: center;
+}
+
+.form__password-divider {
+	color: rgb(255 78 99 / 1);
+}
+
+.form__password-number {
+	color: rgb(23 93 220 / 1);
+}
+
+.form__copy {
+	order: 2;
+	color: hsl(0 0% 98%);
+	background-color: hsl(240 5.9% 10%/.9);
+}
+
+.form__generate {
+	order: 1;
+	background-color: hsl(240 4.8% 95.9%/.8);
+}
+
+.form__word-count-control {
+	width: 100%;
+}
+
+.form__divider-control {
+	width: 24px;
+	min-height: 24px;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .05), 0 1px 2px -1px rgba(0, 0, 0, .05);
+	border: 1px solid hsl(240 5.9% 90%);
+	border-radius: 8px;
+	font: inherit;
+	text-align: center;
+}
+
+@media screen and (min-width: 640px) {
+	body {
+		align-content: center;
+		justify-items: center;
+		padding: 0 32px;
+		font-size: 18px;
+	}
+
+	button {
+		padding: 8px 12px;
+	}
+
+	.form {
+		grid-template-columns: repeat(6, 1fr);
+		margin: 32px 0;
+		padding: 32px;
+		border-radius: 12px;
+	}
+
+	.form__password-wrapper {
+		grid-column: 1 / -1;
+	}
+
+	.form__password {
+		font-size: 24px;
+	}
+
+	.form__copy {
+		grid-column: span 3;
+		order: 0;
+	}
+
+	.form__generate {
+		grid-column: span 3;
+		order: 0;
+	}
+
+	.form__word-count {
+		grid-column: 1 / -1;
+	}
+
+	.form__divider {
+		grid-column: span 2;
+		align-content: center;
+	}
+
+	.form__capitalise {
+		grid-column: span 2;
+		align-content: center;
+		justify-self: end;
+	}
+
+	.form__number {
+		grid-column: span 2;
+		align-content: center;
+		justify-self: end;
+	}
+}
